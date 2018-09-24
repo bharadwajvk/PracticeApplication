@@ -1,0 +1,47 @@
+﻿@model IEnumerable<WebApplication4.Entity.User>
+@section Scripts
+{
+    <script src="@Url.Content("~/Content/Scripts/global.min.js")"></script>
+}
+@section Styles
+{
+    <link href="@Url.Content("~/Content/Styles/global.min.css")" rel="stylesheet" type="text/css" />
+}
+@{
+    ViewBag.Title = "UserViewAjax";
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+
+
+<h2>UserViewAjax</h2>
+
+
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>PhoneNumber</th>
+        <th>Address 1</th>
+        <th>Email</th>
+        <th>Country</th>
+    </tr>
+    @foreach (var item in Model.ToList())
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.FirstName</td>
+            <td>@item.LastName</td>
+            <td>@item.PhoneNumber</td>
+            <td>@item.Address</td>
+            <td>@item.Email</td>
+            <td>@item.country</td>
+            <td>@Html.ActionLink("Edit", "UserEdit", new { id = item.Id })</td>
+            <td>@Html.ActionLink("Delete", "UserDelete", new { id = item.Id })</td>
+        </tr>
+    }
+</table>
+
+
+@Html.("UserRegistration", "")

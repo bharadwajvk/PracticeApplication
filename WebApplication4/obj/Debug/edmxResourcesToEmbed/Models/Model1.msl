@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MVCPracticeModelStoreContainer" CdmEntityContainer="MVCPracticeEntities">
+    <EntitySetMapping Name="UserDetails">
+      <EntityTypeMapping TypeName="MVCPracticeModel.UserDetail">
+        <MappingFragment StoreEntitySet="UserDetail">
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_AddUserDetail" FunctionName="MVCPracticeModel.Store.sp_AddUserDetail" />
+    <FunctionImportMapping FunctionImportName="sp_EditUserDetail" FunctionName="MVCPracticeModel.Store.sp_EditUserDetail" />
+    <FunctionImportMapping FunctionImportName="sp_DeleteUserDetail" FunctionName="MVCPracticeModel.Store.sp_DeleteUserDetail" />
+  </EntityContainerMapping>
+</Mapping>
